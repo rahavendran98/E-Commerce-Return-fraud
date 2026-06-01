@@ -1,0 +1,28 @@
+
+DATA UNDERSTANDING SUMMARY
+
+Dataset: E-Commerce Return Fraud Detection
+Total Records: 50500
+Total Features: 30
+Target Variable: return_fraud (Binary: 0=Not Fraud, 1=Fraud)
+
+FRAUD DISTRIBUTION:
+return_fraud
+1    35487
+0    15013
+Name: count, dtype: int64
+
+KEY OBSERVATIONS:
+1. product_price has ₹ symbol — needs cleaning (object -> float)
+2. discount_percent has % symbol — needs cleaning (object -> float)  
+3. gender column has inconsistent values (Male/M/male/MALE)
+4. membership_type has inconsistent values (Gold/GOLD/gold/Gld)
+5. Date columns have multiple formats — needs standardization
+6. customer_age, customer_rating have missing values
+7. return_rate > 1 in some rows — mathematically impossible (outlier)
+8. product_price = 99999999 in one row — likely data entry error
+
+LEAKAGE SUSPECTS (to be confirmed):
+- fraud_investigation_status
+- refund_approved  
+- final_fraud_decision

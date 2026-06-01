@@ -1,0 +1,54 @@
+# Virtual environments
+commerceenv/
+venv/
+env/
+.venv/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Environment variables
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Data (large files — add back selectively if needed)
+# data/raw/*.csv
+
+# Models (large binaries)
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.bin
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
