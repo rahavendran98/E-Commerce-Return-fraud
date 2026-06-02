@@ -1,0 +1,34 @@
+E-COMMERCE FRAUD DETECTION — DATA QUALITY REPORT
+
+1. MISSING VALUES:
+   customer_age: 7529 missing (14.91%)
+   membership_type: 6750 missing (13.37%)
+   product_price: 6516 missing (12.9%)
+   customer_rating: 7575 missing (15.0%)
+
+2. DATA TYPE ISSUES:
+   product_price: object (should be float) — ₹ symbol present
+   discount_percent: object (should be float) — % symbol present
+
+3. CATEGORICAL INCONSISTENCIES:
+   gender: Multiple formats (Male/M/male/MALE/Female/F/female)
+   membership_type: Multiple formats (Gold/GOLD/gold/Gld)
+
+4. INVALID VALUES:
+   return_rate > 1.0: 5935 rows
+   product_price = 99999999: data entry error
+
+5. DATE FORMAT ISSUES:
+   All 4 date columns have mixed formats
+   Formats found: YYYY-MM-DD, Mon-DD-YYYY, MM/DD/YYYY, DD/MM/YYYY, MM-DD-YYYY
+
+6. OUTLIER SUMMARY:
+   customer_age: 201 outliers (0.4%)
+   total_orders: 51 outliers (0.1%)
+   previous_returns: 50 outliers (0.1%)
+   return_rate: 5822 outliers (11.53%)
+   order_amount: 68 outliers (0.13%)
+
+7. DUPLICATES:
+   Full duplicate rows: 500
+   Duplicate order_ids: 500
